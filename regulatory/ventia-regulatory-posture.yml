@@ -1,0 +1,88 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://ventia.com/legal
+notes: >-
+  Ventia's legal hub (https://ventia.com/legal, HTTP 200) links a Terms of Use PDF, a Privacy Statement PDF
+  (Revision 5.0, document VENTIA-1039959896-4592; the same file is also linked from /generic-page/our-policies
+  as privacy-statement.pdf, byte-identical) and a Privacy Act complaint form. Quotes below come from the
+  Privacy Statement PDF text, with PDF line breaks joined by single spaces. The pages do not speak to
+  subprocessor lists, AI transparency, Global Privacy Control, exit assistance, accessibility conformance,
+  SBOMs or transparency reports, so nothing is recorded for those signals.
+signals:
+  data_subject_request:
+    url: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+    section: '9 Accessing and updating personal information'
+    channel: privacy@ventia.com
+    rights_named: [access, correction]
+    escalation: Privacy Complaint Form (https://ventia.com/content/dam/ventia/common/documents/ventia-privacyactcomplaintform-final.pdf) and the Privacy Officer/Group Compliance Officer
+    evidence:
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Upon request, Ventia will provide you with access to the information held about you, unless there is
+        an exception which applies under the APPs or the IPPs.
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        You can access your personal information and notify any change, modification, or correction, by
+        contacting Ventia’s Privacy Officer/Group Compliance Officer by email at privacy@ventia.com
+    note: >-
+      Access and correction rights under the Australian Privacy Principles (APPs) and NZ Information Privacy
+      Principles (IPPs), requested by email. No response time is stated and deletion or portability is not
+      named as a right.
+  data_retention:
+    url: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+    section: '4 Retention and disposal of information'
+    evidence:
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Ventia will only keep personal information it needs for the purpose for which it was collected.
+        Ventia will take reasonable steps to dispose of such information when it has no further need to use
+        it, or it is required by law to do so.
+    note: >-
+      Purpose-limited retention with disposal when no longer needed. No fixed retention periods are published,
+      although the security section also lists "Automated data retention schedules" as a control.
+  incident_notification:
+    url: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+    section: 'Privacy commitments (opening bullet list)'
+    evidence:
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        advise individuals (and any regulatory body if required) of any privacy breach that is likely to cause
+        anyone serious harm.
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Incident response procedures for managing data breaches involving personal information
+    note: >-
+      A commitment to notify affected individuals and regulators of serious-harm privacy breaches, matching the
+      Notifiable Data Breaches threshold. It is a bullet in a list of commitments, and no notification timeframe
+      is stated.
+  data_residency:
+    url: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+    section: '3 Disclosing personal information'
+    evidence:
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        In some circumstances Ventia may disclose personal information to entities located outside Australia
+        and New Zealand, including to its own related bodies corporate, third party service providers and
+        business partners.
+    - source: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        When disclosing information overseas, Ventia will take all reasonable steps to ensure that the recipient
+        will handle the information in a manner consistent with the Acts and the NZ Acts and applicable law.
+    note: >-
+      This is a disclosure that data MAY leave Australia and New Zealand, not a residency commitment. No
+      destination countries are named, and the safeguard is "reasonable steps".

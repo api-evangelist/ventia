@@ -1,0 +1,19 @@
+generated: '2026-10-22'
+method: none
+source:
+- https://zapier.com/apps/ventia/integrations
+- https://n8n.io/integrations/ventia/
+- https://composio.dev/toolkits/ventia
+- https://monid.ai/tools/ventia
+checked:
+- https://zapier.com/apps/ventia/integrations
+- https://n8n.io/integrations/ventia/
+- https://www.make.com/en/integrations/ventia
+- https://ventia.com/
+- https://composio.dev/toolkits/ventia
+- https://monid.ai/tools/ventia
+summary: No integration marketplace listings, partner-integrations page or API contract found for Ventia (an infrastructure
+  services company with no public API).
+marketplace_apps: []
+edges: []
+templates: []

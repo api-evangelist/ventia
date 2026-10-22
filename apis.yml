@@ -1,23 +1,95 @@
 aid: ventia
+
 name: Ventia
-description: 'Ventia is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Ventia (ASX: VNT) is a leading essential infrastructure services provider in Australia and New Zealand, with over 35,000 employees and subcontractors across more than 400 sites. It operates, maintains and manages infrastructure spanning transport and energy networks, critical utilities and water, telecommunications, defence, schools and hospitals, including capital works, maintenance and digital solutions services. Surfaced via the API Evangelist harvest backlog (australia-apidays-2026); no public developer portal or API documentation was found on ventia.com.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ventia/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Infrastructure Services
+- Facilities Management
+- Utilities
+- Transport
+- Defence
+- Telecommunications
+- Australia
+- New Zealand
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.ventia.com/content/dam/ventia/logos/logoVentia.jpg
+
 common:
+- type: Hosts
+  url: hosts/ventia-hosts.yml
+- type: Vendors
+  url: vendors/ventia-vendors.yml
+- type: SignUp
+  url: https://ventia.com/insights/our-thinking/register-once-practise-anywhere-the-case-for-engineering-reform
 - type: Website
   url: https://ventia.com/
+- type: DomainSecurity
+  url: security/ventia-domain-security.yml
+- type: About
+  url: https://ventia.com/who-we-are/about-us
+- type: Support
+  url: https://ventia.com/contact
+- type: Blog
+  url: https://ventia.com/insights
+- type: Newsroom
+  url: https://ventia.com/newsroom
+- type: InvestorRelations
+  url: https://ventia.com/investor-centre
+- type: Careers
+  url: https://ventia.com/work-with-us/careers
+- type: TermsOfService
+  url: https://ventia.com/content/dam/ventia/common/documents/terms_of_use.pdf
+- type: PrivacyPolicy
+  url: https://ventia.com/content/dam/ventia/common/documents/Privacy_Statement.pdf
+- type: Legal
+  url: https://ventia.com/legal
+- type: LinkedIn
+  url: https://www.linkedin.com/company/vnt/
+- type: X
+  url: https://x.com/VentiaServices
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: 'Identity verified from ventia.com (title "ASX : VNT", about-us page). No developer portal, API docs or public API found; partner.ventia.com is a partner account-activation portal (root GET only), not recorded.'
+  evidence:
+  - url: https://ventia.com/
+    status: 200
+  - url: https://ventia.com/who-we-are/about-us
+    status: 200
+  - url: https://ventia.com/sitemap.xml
+    status: 200
+  - url: https://partner.ventia.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

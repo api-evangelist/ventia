@@ -1,0 +1,80 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 3
+  other_domain: 0
+  platform: 2
+  roles:
+  - api
+  - other
+  - partner
+  - website
+hosts:
+- host: api.ventia.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: ventia.com
+  role: api
+  relation: own
+- host: partner.ventia.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: Activate Your Ventia Account
+  status: 200
+  registrable_domain: ventia.com
+  role: partner
+  relation: own
+- host: ventia.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - SignUp
+  - Website
+  - About
+  - Support
+  - Blog
+  - Newsroom
+  - InvestorRelations
+  - Careers
+  - TermsOfService
+  - PrivacyPolicy
+  - Legal
+  serves:
+  - cdn
+  vendor: fastly
+  registrable_domain: ventia.com
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: x.com
+  found_by:
+  - pointer
+  types:
+  - X
+  serves: []
+  registrable_domain: x.com
+  role: other
+  relation: platform

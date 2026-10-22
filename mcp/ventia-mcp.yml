@@ -1,0 +1,27 @@
+name: Ventia MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+source:
+- https://ventia.com/.well-known/mcp.json
+- https://ventia.com/mcp
+description: >-
+  Checked for an official Ventia MCP server and found none. https://ventia.com/.well-known/mcp.json
+  and https://ventia.com/AGENTS.md returned HTTP 404 on 2026-10-22. In pre-flight contract discovery,
+  https://ventia.com/mcp returned 403, and so did its control path, which means the edge blocks the request before routing it. That proves nothing either way.
+  The same discovery on api.ventia.com, ventia.com and partner.ventia.com found no OpenAPI or AsyncAPI.
+  A web search for a Ventia MCP server or API returned nothing from Ventia. There is no published
+  OpenAPI to derive a candidate tool list from, so this file lists no tools.
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+tools: []
+probes:
+- url: https://ventia.com/.well-known/mcp.json
+  status: 404
+- url: https://ventia.com/AGENTS.md
+  status: 404
+- url: https://ventia.com/mcp
+  status: 403
+  note: control path also 403 (opaque edge), from preflight 2026-10-22
